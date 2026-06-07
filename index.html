@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Witchey Electronics | Home Base</title>
+  <meta name="description" content="Personal home base for servers, domains, websites, electronics, and cars." />
+  <style>
+    :root {
+      --bg: #0a1018;
+      --bg-soft: #111a26;
+      --card: #162232;
+      --text: #e9f1fb;
+      --muted: #a8bdd8;
+      --accent: #17d4a7;
+      --accent-2: #5cc5ff;
+      --border: rgba(255, 255, 255, 0.12);
+      --shadow: 0 20px 45px rgba(0, 0, 0, 0.35);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: "Trebuchet MS", "Segoe UI", sans-serif;
+      background:
+        radial-gradient(circle at 20% 10%, rgba(23, 212, 167, 0.08), transparent 35%),
+        radial-gradient(circle at 80% 0%, rgba(92, 197, 255, 0.12), transparent 30%),
+        linear-gradient(160deg, var(--bg) 0%, #0d1622 45%, #0f1c2c 100%);
+      color: var(--text);
+      line-height: 1.5;
+      min-height: 100vh;
+    }
+
+    .frame {
+      width: min(1100px, 92%);
+      margin: 0 auto;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      backdrop-filter: blur(8px);
+      background: rgba(10, 16, 24, 0.7);
+      border-bottom: 1px solid var(--border);
+      z-index: 10;
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0.9rem 0;
+    }
+
+    .brand {
+      letter-spacing: 0.08em;
+      font-weight: 700;
+      text-transform: uppercase;
+      color: var(--text);
+      text-decoration: none;
+    }
+
+    .nav a {
+      color: var(--muted);
+      text-decoration: none;
+      margin-left: 1rem;
+    }
+
+    .nav a:hover {
+      color: var(--accent);
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      gap: 2rem;
+      align-items: center;
+      padding: 4rem 0 3rem;
+    }
+
+    .badge {
+      display: inline-block;
+      margin-bottom: 1rem;
+      padding: 0.35rem 0.7rem;
+      border-radius: 999px;
+      font-size: 0.85rem;
+      color: var(--bg);
+      background: linear-gradient(90deg, var(--accent), var(--accent-2));
+      font-weight: 700;
+    }
+
+    h1 {
+      font-size: clamp(1.9rem, 4vw, 3rem);
+      line-height: 1.15;
+      margin-bottom: 0.9rem;
+    }
+
+    .hero p {
+      color: var(--muted);
+      max-width: 46ch;
+      margin-bottom: 1.4rem;
+    }
+
+    .cta {
+      display: inline-block;
+      background: var(--accent);
+      color: #062018;
+      text-decoration: none;
+      font-weight: 700;
+      padding: 0.7rem 1rem;
+      border-radius: 0.55rem;
+      box-shadow: var(--shadow);
+      transition: transform 0.2s ease;
+    }
+
+    .cta:hover {
+      transform: translateY(-2px);
+    }
+
+    .cta-alt {
+      display: inline-block;
+      margin-left: 0.7rem;
+      background: transparent;
+      color: var(--text);
+      text-decoration: none;
+      font-weight: 700;
+      padding: 0.68rem 1rem;
+      border-radius: 0.55rem;
+      border: 1px solid var(--accent-2);
+      transition: transform 0.2s ease, border-color 0.2s ease;
+    }
+
+    .cta-alt:hover {
+      transform: translateY(-2px);
+      border-color: var(--accent);
+    }
+
+    .hero-visual {
+      border: 1px solid var(--border);
+      background: linear-gradient(180deg, #1a2d45 0%, #152438 100%);
+      border-radius: 1rem;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+    }
+
+    .hero-visual img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      aspect-ratio: 4 / 3;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
+      padding-bottom: 3.5rem;
+    }
+
+    .card {
+      background: rgba(22, 34, 50, 0.85);
+      border: 1px solid var(--border);
+      border-radius: 0.9rem;
+      padding: 1rem;
+    }
+
+    .card h2 {
+      font-size: 1.05rem;
+      margin-bottom: 0.45rem;
+      color: #f0f7ff;
+    }
+
+    .card p {
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    footer {
+      border-top: 1px solid var(--border);
+      color: var(--muted);
+      padding: 1rem 0 1.6rem;
+      font-size: 0.9rem;
+      text-align: center;
+    }
+
+    @media (max-width: 900px) {
+      .hero {
+        grid-template-columns: 1fr;
+        padding-top: 2.4rem;
+      }
+
+      .grid {
+        grid-template-columns: 1fr;
+      }
+
+      .nav {
+        flex-wrap: wrap;
+        gap: 0.4rem;
+      }
+
+      .nav a {
+        margin-left: 0.7rem;
+      }
+
+      .cta-alt {
+        margin-left: 0.4rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="frame nav">
+      <a class="brand" href="/">Witchey Electronics</a>
+      <nav>
+        <a href="#about">About</a>
+        <a href="/domains">Domains for Sale</a>
+        <a href="#interests">Interests</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="frame">
+    <section class="hero" id="about">
+      <div>
+        <span class="badge">Personal Home Base</span>
+        <h1>Experimenting with domains, websites, servers, and projects I enjoy.</h1>
+        <p>
+          This is my corner of the internet. I use it to learn, test ideas, and keep
+          everything I am building in one place.
+        </p>
+        <a class="cta" href="/domains">View Domains for Sale</a>
+        <a class="cta-alt" href="#interests">See What I'm Dabbling In</a>
+      </div>
+      <div class="hero-visual" aria-hidden="true">
+        <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80" alt="Close up of electronics components and circuit board" />
+      </div>
+    </section>
+
+    <section class="grid" id="interests">
+      <article class="card">
+        <h2>Domains and Websites</h2>
+        <p>Buying domains, building pages, and learning how to run and host sites.</p>
+      </article>
+      <article class="card">
+        <h2>Servers and Home Lab</h2>
+        <p>Running services at home, improving security, and testing new tools.</p>
+      </article>
+      <article class="card">
+        <h2>Electronics and Cars</h2>
+        <p>Hands-on electronics projects and car-related ideas, upgrades, and experiments.</p>
+      </article>
+    </section>
+  </main>
+
+  <footer>
+    <div class="frame">Established 2019 | &copy; <span id="year"></span> WitcheyElectronics.com</div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
