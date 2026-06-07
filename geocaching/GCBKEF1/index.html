@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mystery Minigolf #1</title>
+
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+    crossorigin=""
+  />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="container">
+    <header class="page-header">
+      <h1>Mystery Minigolf 2 - #1 GCBKEF1</h1>
+      <p><a class="index-link" href="/geocaching/mm2">Back to Puzzle Index</a></p>
+      <p>Click the map to drop a marker. Submit guesses to get warmer/colder feedback.</p>
+      <p>When your guess is within 100 feet, the final coordinates will be displayed.</p>
+    </header>
+
+    <section class="layout" aria-label="Geocache puzzle layout">
+      <article class="map-wrap">
+        <div id="map" aria-label="Map for geocache guessing"></div>
+      </article>
+
+      <aside class="panel" aria-label="Guess controls and results">
+        <div class="result-panel">
+          <h2>Latest Guess</h2>
+          <p><strong>Distance:</strong> <span id="distanceValue">-</span></p>
+          <p><strong>Hint:</strong> <span id="hintValue" class="hint-badge hint-neutral">-</span></p>
+          <p id="finalCoordsRow" class="hidden">
+            <strong>Final Coordinates:</strong> <span id="finalCoordsValue"></span>
+          </p>
+        </div>
+
+        <div class="stats-grid">
+          <div class="stat-card">
+            <p class="label">Attempt</p>
+            <p class="value" id="attemptValue">0</p>
+          </div>
+          <div class="stat-card">
+            <p class="label">Best</p>
+            <p class="value" id="bestDistanceValue">-</p>
+          </div>
+          <div class="stat-card">
+            <p class="label">Radius</p>
+            <p class="value" id="solveDistanceValue">100 ft</p>
+          </div>
+          <div class="stat-card">
+            <p class="label">Status</p>
+            <p class="value unsolved" id="solvedValue">Not solved</p>
+          </div>
+        </div>
+
+        <div class="coords-box">
+          <div><strong>Latitude:</strong> <span id="selected-lat">None</span></div>
+          <div><strong>Longitude:</strong> <span id="selected-lng">None</span></div>
+        </div>
+
+        <div class="button-row">
+          <button id="newGameBtn" type="button" class="warn">New Game</button>
+        </div>
+
+        <div id="status" class="status" aria-live="polite">
+          Place a marker on the map to begin.
+        </div>
+
+        <div class="history-panel">
+          <h2>Guesses</h2>
+          <ol id="historyList"></ol>
+        </div>
+      </aside>
+    </section>
+  </main>
+
+  <script
+    src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+    crossorigin=""
+  ></script>
+
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mystery Minigolf Index</title>
+  <style>
+    :root {
+      --bg: #0d1522;
+      --panel: #17263a;
+      --text: #edf3fb;
+      --muted: #9eb2ca;
+      --line: rgba(255, 255, 255, 0.16);
+      --accent: #28d3a4;
+      --accent-strong: #16b488;
+    }
+
+    * { box-sizing: border-box; }
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      min-height: 100%;
+    }
+
+    body {
+      font-family: "Trebuchet MS", "Segoe UI", sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at 15% 0%, rgba(40, 211, 164, 0.14), transparent 34%),
+        radial-gradient(circle at 90% 10%, rgba(61, 138, 255, 0.18), transparent 35%),
+        linear-gradient(155deg, #0c121d, #0f1a2a 42%, #112036);
+    }
+
+    .container {
+      width: min(900px, 94%);
+      margin: 0 auto;
+      padding: 1.2rem 0 1.8rem;
+    }
+
+    .header {
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+
+    .header h1 {
+      margin: 0 0 0.4rem;
+      font-size: clamp(1.6rem, 4vw, 2.4rem);
+    }
+
+    .header p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .panel {
+      border-radius: 14px;
+      border: 1px solid var(--line);
+      background: rgba(17, 29, 45, 0.88);
+      box-shadow: 0 18px 40px rgba(0, 0, 0, 0.32);
+      padding: 1rem;
+    }
+
+    .list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: grid;
+      gap: 0.6rem;
+    }
+
+    .item a {
+      display: block;
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      padding: 0.75rem 0.85rem;
+      color: var(--text);
+      text-decoration: none;
+      background: #1d3048;
+      font-weight: 700;
+    }
+
+    .item a:hover {
+      border-color: var(--accent);
+      color: var(--accent);
+    }
+
+    .tag {
+      margin-left: 0.4rem;
+      color: var(--muted);
+      font-weight: 600;
+      font-size: 0.92rem;
+    }
+  </style>
+</head>
+<body>
+  <main class="container">
+    <header class="header">
+      <h1>Mystery Minigolf 2 Index</h1>
+      <p>Select any puzzle below.</p>
+    </header>
+
+    <section class="panel" aria-label="Puzzle list">
+      <ul class="list">
+        <li class="item"><a href="/geocaching/GCBKEF1/">#1 <span class="tag">GCBKEF1</span></a></li>
+        <li class="item"><a href="/geocaching/GCBKEF2/">#2 <span class="tag">GCBKEF2</span></a></li>
+        <li class="item"><a href="/geocaching/GCBKEF3/">#3 <span class="tag">GCBKEF3</span></a></li>
+        <li class="item"><a href="/geocaching/GCBKEF4/">#4 <span class="tag">GCBKEF4</span></a></li>
+        <li class="item"><a href="/geocaching/GCBKEF5/">#5 <span class="tag">GCBKEF5</span></a></li>
+        <li class="item"><a href="/geocaching/GCBKEF6/">#6 <span class="tag">GCBKEF6</span></a></li>
+        <li class="item"><a href="/geocaching/GCBKEF7/">#7 <span class="tag">GCBKEF7</span></a></li>
+        <li class="item"><a href="/geocaching/GCBKEF8/">#8 <span class="tag">GCBKEF8</span></a></li>
+        <li class="item"><a href="/geocaching/GCBKEF9/">#9 <span class="tag">GCBKEF9</span></a></li>
+        <li class="item"><a href="/geocaching/GCBKEF0/">BONUS <span class="tag">GCBKEF0</span></a></li>
+      </ul>
+    </section>
+  </main>
+</body>
+</html>

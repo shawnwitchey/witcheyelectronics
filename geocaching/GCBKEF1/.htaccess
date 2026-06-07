@@ -1,0 +1,8 @@
+<IfModule mod_mime.c>
+  RemoveType .php
+  AddType application/x-httpd-php .php
+</IfModule>
+
+<IfModule mod_php.c>
+  php_flag engine on
+</IfModule>

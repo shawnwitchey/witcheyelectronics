@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mystery Minigolf BONUS</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="container">
+    <header class="page-header">
+      <h1>Mystery Minigolf 2 - BONUS GCBKEF0</h1>
+      <p><a class="index-link" href="/geocaching/mm2">Back to Puzzle Index</a></p>
+      <p>Enter one 3-digit proof for each cache below.</p>
+      <p>Use the last 3 digits from either the North or West coordinate from your solved final for each code.</p>
+    </header>
+
+    <section class="layout" aria-label="Bonus unlock layout">
+      <aside class="panel" style="grid-column: 1 / -1;">
+        <div class="result-panel">
+          <h2>Bonus Unlock</h2>
+          <p><strong>Status:</strong> <span id="unlockStatus" class="hint-badge hint-neutral">Locked</span></p>
+          <p id="bonusCoordsRow" class="hidden">
+            <strong>Bonus Final Coordinates:</strong> <span id="bonusCoordsValue"></span>
+          </p>
+        </div>
+
+        <div class="history-panel" style="max-height: none;">
+          <h2>Proof Entry</h2>
+          <form id="proofForm" autocomplete="off" novalidate>
+            <div class="stats-grid">
+              <label class="stat-card">
+                <p class="label">#1 - GCBKEF1</p>
+                <input id="proof-GCBKEF1" name="GCBKEF1" type="text" inputmode="numeric" maxlength="3" placeholder="000" />
+              </label>
+              <label class="stat-card">
+                <p class="label">#2 - GCBKEF2</p>
+                <input id="proof-GCBKEF2" name="GCBKEF2" type="text" inputmode="numeric" maxlength="3" placeholder="000" />
+              </label>
+              <label class="stat-card">
+                <p class="label">#3 - GCBKEF3</p>
+                <input id="proof-GCBKEF3" name="GCBKEF3" type="text" inputmode="numeric" maxlength="3" placeholder="000" />
+              </label>
+              <label class="stat-card">
+                <p class="label">#4 - GCBKEF4</p>
+                <input id="proof-GCBKEF4" name="GCBKEF4" type="text" inputmode="numeric" maxlength="3" placeholder="000" />
+              </label>
+              <label class="stat-card">
+                <p class="label">#5 - GCBKEF5</p>
+                <input id="proof-GCBKEF5" name="GCBKEF5" type="text" inputmode="numeric" maxlength="3" placeholder="000" />
+              </label>
+              <label class="stat-card">
+                <p class="label">#6 - GCBKEF6</p>
+                <input id="proof-GCBKEF6" name="GCBKEF6" type="text" inputmode="numeric" maxlength="3" placeholder="000" />
+              </label>
+              <label class="stat-card">
+                <p class="label">#7 - GCBKEF7</p>
+                <input id="proof-GCBKEF7" name="GCBKEF7" type="text" inputmode="numeric" maxlength="3" placeholder="000" />
+              </label>
+              <label class="stat-card">
+                <p class="label">#8 - GCBKEF8</p>
+                <input id="proof-GCBKEF8" name="GCBKEF8" type="text" inputmode="numeric" maxlength="3" placeholder="000" />
+              </label>
+              <label class="stat-card">
+                <p class="label">#9 - GCBKEF9</p>
+                <input id="proof-GCBKEF9" name="GCBKEF9" type="text" inputmode="numeric" maxlength="3" placeholder="000" />
+              </label>
+            </div>
+
+            <div class="button-row">
+              <button id="verifyBtn" type="submit">Verify & Unlock Bonus</button>
+              <button id="clearBtn" type="button" class="secondary">Clear Entries</button>
+            </div>
+          </form>
+        </div>
+
+        <div id="status" class="status" aria-live="polite">Enter all nine proof numbers, then verify.</div>
+      </aside>
+    </section>
+  </main>
+
+  <script src="app.js?v=20260424"></script>
+</body>
+</html>

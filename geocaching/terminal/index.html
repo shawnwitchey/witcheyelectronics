@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Geocaching Terminal Puzzle</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="terminal-shell">
+    <section class="terminal-window" aria-label="Simulated terminal">
+      <div class="terminal-topbar">
+        <span class="terminal-dot"></span>
+        <span class="terminal-dot"></span>
+        <span class="terminal-dot"></span>
+        <p class="terminal-title">GEOCACHING REMOTE ACCESS NODE</p>
+      </div>
+
+      <div id="terminalOutput" class="terminal-output" aria-live="polite"></div>
+
+      <form id="terminalForm" class="terminal-inputbar" autocomplete="off">
+        <label class="sr-only" for="commandInput">Terminal command</label>
+        <span id="promptLabel" class="prompt"></span>
+        <div class="input-wrap">
+          <input id="commandInput" class="command-input" type="text" spellcheck="false" autofocus />
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <script src="puzzle-data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
